@@ -20,9 +20,16 @@
 #include <dt-bindings/zmk/rgb.h>
 
 /* On demand includes */
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2100  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 #include <dt-bindings/zmk/pointing.h>
+
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <600>;
+    acceleration-exponent = <1>;
+};
 
 /* Automatically generated layer name #define */
 #define LAYER_Homerow_Mods 0
@@ -599,8 +606,8 @@
             tapping-term-ms = <120>;
             bindings = <&kp>, <&kp>;
             flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <100>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <57 56 55 72 73 74 5 6 7 8 16 17 18 19 20 28 29 30 31 32 40 41 42 43 44 58 59 60 61 62 75 76 77 78 9 21 33 45 63 79 52 53 54 70 71 69>;
             hold-trigger-on-release;
         };
@@ -612,8 +619,8 @@
             tapping-term-ms = <160>;
             bindings = <&kp>, <&kp>;
             flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <150>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <175>;
             hold-trigger-key-positions = <57 56 55 72 73 74 5 6 7 8 16 17 18 19 20 28 29 30 31 32 40 41 42 43 44 58 59 60 61 62 75 76 77 78 9 21 33 45 63 79 52 53 54 69 70 71>;
             hold-trigger-on-release;
         };
@@ -638,8 +645,8 @@
             tapping-term-ms = <190>;
             bindings = <&kp>, <&kp>;
             flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <150>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <175>;
             hold-trigger-key-positions = <57 56 55 72 73 74 5 6 7 8 16 17 18 19 20 28 29 30 31 32 40 41 42 43 44 58 59 60 61 62 75 76 77 78 9 21 33 45 63 79 52 53 54 69 70 71>;
             hold-trigger-on-release;
         };
@@ -651,8 +658,8 @@
             tapping-term-ms = <120>;
             bindings = <&kp>, <&kp>;
             flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <100>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <52 53 54 71 70 69 0 1 10 11 12 13 14 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 64 65 66 67 68 15 4 2 3 55 56 57 72 73 74>;
             hold-trigger-on-release;
         };
@@ -664,8 +671,8 @@
             tapping-term-ms = <160>;
             bindings = <&kp>, <&kp>;
             flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <150>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <175>;
             hold-trigger-key-positions = <52 53 54 71 70 69 0 1 10 11 12 13 14 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 64 65 66 67 68 15 4 2 3 55 56 57 72 73 74>;
             hold-trigger-on-release;
         };
@@ -691,8 +698,8 @@
             tapping-term-ms = <190>;
             bindings = <&kp>, <&kp>;
             flavor = "tap-preferred";
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <100>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <175>;
             hold-trigger-key-positions = <52 53 54 71 70 69 0 1 10 11 12 13 14 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 64 65 66 67 68 15 4 2 3 55 56 57 72 73 74>;
             hold-trigger-on-release;
         };
@@ -701,10 +708,10 @@
         space_v2_TKZ: space_v2_TKZ {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <225>;
+            tapping-term-ms = <250>;
             bindings = <&mo>, <&kp>;
             flavor = "balanced";
-            quick-tap-ms = <175>;
+            quick-tap-ms = <200>;
             retro-tap;
         };
 
@@ -712,10 +719,10 @@
         thumb_v2_TKZ: thumb_v2_TKZ {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <225>;
+            tapping-term-ms = <250>;
             bindings = <&mo>, <&kp>;
             flavor = "balanced";
-            quick-tap-ms = <325>;
+            quick-tap-ms = <350>;
         };
 
         layer_off: layer_off {
@@ -911,8 +918,8 @@
         layer_Cursor_Shifted {
             bindings = <
                 &none                   &none                    &none                    &none              &none                                                                                   &none              &none          &none        &none   &none
-              &kp ESC                 &kp RET                &kp SPACE                   &trans             &trans  &trans                                                     &kp PSCRN         &kp PG_UP          &kp PG_DN         &trans       &trans  &trans
-            &kp LC(E)                  &trans                   &trans                   &trans             &trans  &trans                                                        &trans      &kp LS(HOME)        &kp LS(END)         &trans       &trans  &trans
+              &kp ESC                 &kp RET                &kp SPACE                   &trans             &trans  &trans                                                     &kp PSCRN      &kp LS(HOME)        &kp LS(END)         &trans       &trans  &trans
+            &kp LC(E)                  &trans                   &trans                   &trans             &trans  &trans                                                        &trans         &kp PG_UP          &kp PG_DN         &trans       &trans  &trans
             &kp LC(L)                &kp LGUI                 &kp LALT                &kp LCTRL          &kp LSHFT  &trans                                                  &kp LS(LEFT)      &kp LS(DOWN)         &kp LS(UP)  &kp LS(RIGHT)       &trans  &trans
             &kp LC(J)  &cur_SELECT_ALL_v1_TKZ  &cur_SELECT_LINE_v1_TKZ                   &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))   &kp LS(BSPC)  &kp LS(DEL)  &trans
  &magic LAYER_Magic 0       &cur_FPREV_v1_TKZ  &cur_EXTEND_LINE_v1_TKZ  &cur_EXTEND_WORD_v1_TKZ  &cur_FNEXT_v1_TKZ           &none  &trans  &trans  &trans  &trans  &trans                          &trans             &trans         &trans       &trans  &trans
