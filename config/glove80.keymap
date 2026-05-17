@@ -864,9 +864,9 @@
             bindings = <
      &none      &none      &none      &none     &none                                                                                           &none             &none                    &none                    &none                   &none
  &kp GRAVE   &kp LBKT   &kp LPAR   &kp RPAR  &kp RBKT    &kp DOT                                                              &none         &sk RSHFT         &sk RCTRL                 &sk RALT                 &sk RGUI                   &none
-  &kp EXCL  &kp COMMA   &kp LBRC   &kp RBRC  &kp SEMI  &kp QMARK                                                          &kp GRAVE          &kp LEFT            &kp UP                 &kp DOWN                &kp RIGHT                 &kp END
-  &kp HASH  &kp CARET  &kp EQUAL  &kp UNDER  &kp DLLR   &kp STAR                                                            &kp DQT          &kp BSPC           &kp TAB                &kp SPACE                  &kp RET                &kp HOME
- &kp TILDE     &kp LT   &kp PIPE  &kp MINUS    &kp GT   &kp FSLH   &kp BSLH    &kp DOT  &kp STAR   &none   &none   &none    &kp SQT           &kp DEL       &kp LS(TAB)  &cur_SELECT_WORD_v1_TKZ  &cur_SELECT_LINE_v1_TKZ  &cur_SELECT_ALL_v1_TKZ
+  &kp EXCL  &kp AMPS  &kp LBKT   &kp RBKT   &kp PLUS  &kp PRCNT  &kp LT                                                            &kp GT           &kp TILDE            &kp DLLR                 &kp RIGHT                &kp END
+  &kp HASH  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  &kp MINUS   &kp UNDER          &kp EQUAL           &kp HASH                &kp STAR                  &kp GRAVE                &kp HOME
+ &kp TILDE     &kp PIPE   &kp SQT  &kp DQT    &kp AT   &kp EXCL   &kp BSLH    &kp DOT  &kp STAR   &none   &none   &none    &kp CARET           &kp EXCL       &kp LS(TAB)  &cur_SELECT_WORD_v1_TKZ  &cur_SELECT_LINE_v1_TKZ  &cur_SELECT_ALL_v1_TKZ
      &none   &kp AMPS    &kp SQT    &kp DQT  &kp PLUS             &kp PRCNT  &kp COLON    &kp AT   &none   &none   &none             &cur_UNDO_v1_TKZ  &cur_REDO_v1_TKZ  &cur_EXTEND_WORD_v1_TKZ  &cur_EXTEND_LINE_v1_TKZ                   &none
             >;
         };
