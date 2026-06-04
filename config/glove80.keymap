@@ -725,6 +725,15 @@
             quick-tap-ms = <350>;
         };
 
+        thumb_mod_v2_TKZ: thumb_mod_v2_TKZ {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            quick-tap-ms = <350>;
+        };
+
         layer_off: layer_off {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -823,7 +832,7 @@
               &kp DEL                          &kp Q  &HRM_left_middy_v1_TKZ RALT W                           &kp E                           &kp R   &kp T                                                                                                                                           &kp Y                            &kp U                            &kp I  &HRM_right_ring_v1_TKZ RALT O                              &kp P   &kp BSLH
               &kp ESC  &HRM_left_pinky_v1_TKZ LGUI A   &HRM_left_ring_v1_TKZ LALT S  &HRM_left_middy_v1_TKZ LCTRL D  &HRM_left_index_v1_TKZ LSHFT F   &kp G                                                                                                                                           &kp H  &HRM_right_index_v1_TKZ RSHFT J  &HRM_right_middy_v1_TKZ RCTRL K  &HRM_right_ring_v1_TKZ LALT L  &HRM_right_pinky_v1_TKZ LGUI SEMI    &kp SQT
             &kp GRAVE                          &kp Z                          &kp X                           &kp C                           &kp V   &kp B  &CAPSWord_v1_TKZ LSHFT MACRO_PLACEHOLDER  &kp LCTRL  &kp LGUI    &lower            &kp RCTRL  &CAPSWord_v1_TKZ RSHFT MACRO_PLACEHOLDER   &kp N                            &kp M                        &kp COMMA                        &kp DOT                           &kp FSLH  &kp PG_UP
- &magic LAYER_Magic 0                       &kp HOME                        &kp END                        &kp LEFT                       &kp RIGHT                              &thumb_v2_TKZ 3 BSPC    &kp TAB  &kp LALT  &kp RALT  &thumb_v2_TKZ 7 RET                     &space_v2_TKZ 4 SPACE                                   &kp UP                         &kp DOWN                       &kp LBKT                           &kp RBKT  &kp PG_DN
+ &magic LAYER_Magic 0                       &kp HOME                        &kp END                        &kp LEFT                       &kp RIGHT                              &thumb_v2_TKZ 3 BSPC    &kp TAB  &thumb_mod_v2_TKZ LALT SPACE  &kp RALT  &thumb_v2_TKZ 7 RET                     &space_v2_TKZ 4 SPACE                                   &kp UP                         &kp DOWN                       &kp LBKT                           &kp RBKT  &kp PG_DN
             >;
         };
 
